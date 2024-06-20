@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;800;900&display=swap);
+body {
+  font-family: "Montserrat", sans-serif;
+  user-select: text;
+}
+html {
+  background-color: white !important;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.ScrollModal::-webkit-scrollbar {
+  width: 5px;
+}
+.ScrollModal {
+  cursor: n-resize;
+}
+.ScrollModal::-webkit-scrollbar-thumb {
+  background: yellow;
+  border-radius: 10px;
+}
+.ScrollModal::selection{
+  background: red !important;
+  color: white !important;
+}
+@media (max-width: 300px) {
+  .card {
+    width: 100% !important;
+  }
+}
+@media (max-width: 400px) {
+  .comment_parent {
+    height: 100vh !important;
+  }
+  .card {
+    width: 70% !important;
+  }
+}
+@media (max-width: 550px) {
+  .video {
+    width: 100% !important;
+  }
+  .video img {
+    height: 250px !important;
+  }
+  .Hero {
+    height: 100vh !important;
+  }
+}
+.ActorCard {
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  border-radius: 10px;
+}
+.card {
+  transition: 0.3s !important;
+}
+.card:hover {
+  cursor: pointer;
+  transform: translateY(-5px);
+  .img {
+    border-radius: 8px !important;
+    filter: brightness(80%);
+  }
+  .FeaturedMovieButton {
+    display: block;
+  }
+}
+.Hero {
+  height: 100vh;
+}
+.comment_parent {
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: scroll;
+  gap: 30px;
+}
+.comment_parent::-webkit-scrollbar {
+  width: 5px;
+}
+.comment_parent::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 10px;
+}
+.Sign {
+  background: url("../public/sign.png") !important;
+  height: 100vh !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+.SignChild {
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  position: relative;
+  margin-top: 140px;
+}
+.SignSibling {
+  position: absolute;
+  backdrop-filter: blur(8px);
+  height: 100vh;
+  width: 450px;
+}

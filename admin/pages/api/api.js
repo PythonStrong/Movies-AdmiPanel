@@ -1,0 +1,1 @@
+export const api = 'https://backendmovie-7iyv.onrender.com/'
